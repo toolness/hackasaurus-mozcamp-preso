@@ -25,14 +25,31 @@
 </section>
 
 <section>
+  <h2>The Tools</h2>
+</section>
+
+<section>
+  <h2 class="stripe">Website</h2>
   <img src="images/website.jpg">
 </section>
 
 <section>
-  <p>Our tools include a website, educational resources and the X-Ray Goggles bookmarklet.</p>
+  <h2 class="stripe">X-Ray Goggles</h2>
+  <img src="http://hackasaurus.org/images/goggles/supergirl.png" class="original-size" style="top: 100px; left: 200px;">
 </section>
 
 <section>
+  <h2 class="stripe">Educational Resources</h2>
+  <img src="http://hackasaurus.org/images/educators/hacktivity.png" class="original-size tilted" style="top: 100px; left: 100px;">
+  <img src="http://hackasaurus.org/images/educators/checklist.png" class="original-size tilted" style="top: 50px; left: 430px;">
+</section>
+
+<section>
+  <h2>The Non-Tools</h2>
+</section>
+
+<section>
+  <h2 class="stripe">Events</h2>
   <img src="images/jam.jpg">
 </section>
 
@@ -73,6 +90,12 @@
       background-image: -o-linear-gradient(top, #ffef8d, white 500px);  
       z-index: -2;
   }
+  h2.stripe {
+    margin-top: 450px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
   h1, h2 {
     font-family: 'TrashHandRegular';
     margin-top: 200px;
@@ -97,6 +120,17 @@
     padding: 50px;
   }
 
+  img.original-size {
+    width: auto;
+    height: auto;
+    background: transparent;
+  }
+
+  img.tilted {
+    -moz-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+  }
+  
   img.logo {
     width: 550px;
     padding-top: 10px;
@@ -105,6 +139,8 @@
     background-color: transparent;
     display: block;
     margin: 0 auto;
+    -moz-transform: rotate(-4deg);
+    -webkit-transform: rotate(-4deg);
   }
 
   img, video {
