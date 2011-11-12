@@ -1,0 +1,381 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'TrashHandRegular';
+    src: url('../fonts/TrashHand-webfont.eot');
+    src: url('../fonts/TrashHand-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TrashHand-webfont.woff') format('woff'),
+         url('../fonts/TrashHand-webfont.ttf') format('truetype'),
+         url('../fonts/TrashHand-webfont.svg#TrashHandRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MetaWebPro-Black';
+    src: url(../fonts/MetaWebPro-Black.woff) format('woff');
+}
+
+/* Global rules */
+
+html, body {
+  font-family: Georgia, serif;
+  margin: 0px;
+  color: #41415b;
+  height: 100%;
+  background-color: #e7e7e7;
+}
+
+a:link,
+a:visited,
+a:focus,
+a:hover,
+a:active {
+  color: #153959;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+a.more:after {
+  content: ' ▶';
+}
+
+#header-and-content {
+  background-image: url(../images/gradient-ffef8d-to-ffffff-400px.png);
+  background-repeat: repeat-x;
+  background-color: white;
+
+  background-image: -webkit-gradient(linear, left top, left 400px, from(#ffef8d), to(white));
+  background-image: -webkit-linear-gradient(top, #ffef8d, white 400px);
+  background-image: -moz-linear-gradient(top, #ffef8d, white 400px);  
+  background-image: -o-linear-gradient(top, #ffef8d, white 400px);  
+}
+
+#content a {
+  text-decoration: none;
+  color: #E6840B;
+}
+
+#content a:focus,
+#content a:hover,
+#content a:active {
+  text-decoration: underline;
+}
+
+.wrapper {
+  max-width: 960px;
+  padding: 0 10px;
+  margin: 0 auto;
+  overflow: hidden;
+  zoom: 1;
+  position: relative;
+}
+
+/* Header rules */
+
+header .wrapper {
+  height: 100px;
+}
+
+header a#logo {
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  background-image: url(../images/header/hackasaurus-blue-logo.png);
+  width: 357px;
+  height: 24px;
+  
+  /* This hides the text. */
+  text-indent: -3000px;
+  white-space: nowrap;
+  outline: none;
+  overflow: hidden;
+}
+
+header ul {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  top: 16px;
+  right: 150px;
+  list-style-type: none;
+}
+
+header ul li a {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+header ul li {
+  display: inline-block;
+  padding: 5px;
+  border-left: 1px solid #e1d26d;
+}
+
+header ul li:first-child {
+  border-left: none;
+}
+
+header a#mozilla {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  background-image: url(../images/header/mozilla-tab.png);
+  width: 118px;
+  height: 49px;
+
+  /* This hides the text. */
+  text-indent: -3000px;
+  white-space: nowrap;
+  outline: none;
+  overflow: hidden;
+}
+
+/* Main content rules */
+
+#content {
+  font-size: 18px;
+  padding-bottom: 40px;
+}
+
+#content h1, #content h2 {
+  font-weight: normal;
+  font-family: 'TrashHandRegular';
+}
+
+/* The header above content that appears on many pages. */
+
+#content-header {
+  padding-bottom: 40px;
+  overflow: auto;
+}
+
+#content-header h1 {
+  font-size: 48px;
+  margin-bottom: 0px;
+}
+
+/* For while we're waiting on ajax requests. */
+
+.throbber {
+  background: url(/images/ajax-loader.gif);
+  width: 16px;
+  height: 16px;
+  margin: 4px;
+}
+
+/* Two-column layouts that some pages use. */
+
+.two-column > section, .two-column > aside {
+  display: inline-block;
+  vertical-align: top;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.two-column > section {
+  width: 66%;
+  padding-right: 10px;
+}
+
+.two-column > aside {
+  width: 33%;
+  padding-left: 10px;
+}
+
+/* Right column text box used on several pages */
+
+.two-column > aside .textbox {
+  margin-bottom: 75px;
+  margin-top: 75px;
+  padding: 14px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  background-color: #c7e2f3;
+}
+
+.textbox > h2 {
+  font-size: 22px;
+  margin-top: 0px;
+}
+
+/* Footer rules
+ * Based on https://github.com/rossbruniges/splash.mozilla-ignite.org/
+ * (as of commit 3edb1d599296195f223ca8127972ecd9fbc39899) */
+
+footer h1, footer h2 {
+  font-family: "MetaWebPro-Black";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.external {
+  background: url(../images/footer/bg_external.png) repeat-x 0 0 #FFF;
+}
+
+.external h2 {
+  padding-top: 40px;
+  color: #2e2e2d;
+  background: url(../images/footer/icons.png) no-repeat 0 -440px transparent;
+}
+
+.moz h2 {
+  background-position: 0 -590px;
+}
+
+.learn h2 {
+  background-position: 0 -740px;
+}
+
+.external p {
+  font-size: 14px;
+  color: #454545;
+}
+
+.external ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.external li {
+  border-top: 1px solid #d8dadc;
+  font-size: 14px;
+  padding: 0.5em 0;
+}
+
+.external li:first-child {
+  border-top: none;
+}
+
+.partners-and-languages {
+  background: url(../images/footer/bg_partners.png) repeat-x 0 0 #e7e7e7;
+}
+
+.languages {
+  width: 33%;
+  float: right;
+}
+
+.languages form {
+  position: relative;
+}
+
+.languages select {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.languages ul.noscript-language-selector {
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  right: 0px;
+  background: #e7e7e7;
+  list-style-type: none;
+  padding-left: 0px;
+  font-size: 12px;
+}
+
+.partners ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.partners li {
+  margin-left: 10px;
+  float: left;
+}
+
+.partners li:first-child {
+  margin-left: 0;
+}
+
+/* We need to borrow the next two .col declarations 
+ * for some headers as well. */
+.external .col,
+#content-header .col {
+  float: left;
+  width: 33%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.external .col:first-child, 
+#content-header .col:first-child {
+  padding-left: 0
+}
+
+.partners h2 {
+  float: left;
+  line-height: 80px;
+}
+
+.partners a {
+  display: inline-block;
+
+  /* This hides the text. */
+  text-indent: -3000px;
+  white-space: nowrap;
+  outline: none;
+  overflow: hidden;
+}
+
+.partners a.macarthur {
+  margin-top: 40px;
+  margin-left: 20px;
+  width: 80px;
+  height: 40px;
+  background-image: url(../images/partners/macarthur.jpg);
+}
+
+.partners a.hive {
+  margin-top: 25px;
+  margin-left: 10px;
+  width: 120px;
+  height: 65px;
+  background-image: url(../images/partners/hive-logo.png);
+}
+
+.legal {
+  font-size: 10px;
+}
+
+.legal h2 {
+  /* It's only for display on text-only browsers, etc. */
+  display: none;
+}
+
+.legal ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.legal ul li {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-left: 1px solid #4562a8;
+}
+
+.legal ul li:first-child {
+  padding-left: 0px;
+  border-left: none;
+}
+
+.legal div.disclaimer {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}

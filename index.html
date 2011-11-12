@@ -8,8 +8,8 @@
 
 <section>
     <!-- This is the first slide -->
-    <h1>How to Localize Hackasaurus</h1>
-    <footer>by Jess Klein and Atul Varma</footer>
+    <h1>How to Localize</h1>
+    <img class="logo" src="images/hackasaurus-blue-logo.png">
 </section>
 
 <section>
@@ -17,7 +17,7 @@
 </section>
 
 <section>
-  <img src="http://farm7.static.flickr.com/6237/6334393293_6bd4d9e05f_b.jpg">
+  <img src="images/website.jpg">
 </section>
 
 <section>
@@ -29,25 +29,48 @@
 </section>
 
 <section>
-  <img src="http://farm7.static.flickr.com/6034/6334532953_944ca99c94_b.jpg">
+  <img src="images/jam.jpg">
 </section>
 
 <!-- Your Style -->
 <!-- Define the style of your presentation -->
 
-<!-- Maybe a font from http://www.google.com/webfonts ? -->
-<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
-
 <style>
-  html { background-color: black; }
-  body { background-color: white; }
+@font-face {
+    font-family: 'TrashHandRegular';
+    src: url('fonts/TrashHand-webfont.eot');
+    src: url('fonts/TrashHand-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/TrashHand-webfont.woff') format('woff'),
+         url('fonts/TrashHand-webfont.ttf') format('truetype'),
+         url('fonts/TrashHand-webfont.svg#TrashHandRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+  html { 
+    background-color: black;
+    color: #41415b;
+  }
+  body {
+    background-color: white;
+  }
   /* A section is a slide. It's size is 800x600, and this will never change */
   section {
       /* The font from Google */
-      font-family: 'Oswald', arial, serif;
+      font-family: Georgia, serif;
       font-size: 40px;
+      background-image: url(../images/gradient-ffef8d-to-ffffff-400px.png);
+      background-repeat: repeat-x;
+      background-color: white;
+
+      background-image: -webkit-gradient(linear, left top, left 400px, from(#ffef8d), to(white));
+      background-image: -webkit-linear-gradient(top, #ffef8d, white 400px);
+      background-image: -moz-linear-gradient(top, #ffef8d, white 400px);  
+      background-image: -o-linear-gradient(top, #ffef8d, white 400px);  
+      z-index: -2;
   }
   h1, h2 {
+    font-family: 'TrashHandRegular';
     margin-top: 200px;
     text-align: center;
     font-size: 80px;
@@ -69,6 +92,16 @@
     color: white;
     font-size: 60px;
     padding: 50px;
+  }
+
+  img.logo {
+    width: 550px;
+    padding-top: 10px;
+    height: auto;
+    position: static;
+    background-color: transparent;
+    display: block;
+    margin: 0 auto;
   }
 
   img, video {
