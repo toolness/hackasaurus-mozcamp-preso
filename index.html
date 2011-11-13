@@ -117,15 +117,21 @@
     font-style: normal;
 }
 
+  span.mozfest-tag:hover {
+    top: 100px;
+  }
+  
   span.mozfest-tag {
     position: absolute;
     display: block;
-    top: 100px;
+    top: 20px;
     right: -90px;
     width: 260px;
     height: 43px;
-    -moz-transform: rotate(85deg);
-    -webkit-transform: rotate(85deg);
+    -moz-transition: top 1s;
+    -webkit-transition: top 1s;
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
     background-image: url(images/built-at-mozfest-tag.png);
   }
   
